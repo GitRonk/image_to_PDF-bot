@@ -18,5 +18,4 @@ async def start_transfer(message: Message, state: FSMContext):
         reply_markup=finish_transfer)
     await state.set_state(ImageTransfer.transfer_start)
     await state.update_data({"images": []})
-    await state.update_data({"quantity": 0})
     await state.update_data(({"limit": 20}))
